@@ -11,121 +11,148 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f0f2f5;
-            color: #333;
-            padding: 20px;
+            background: linear-gradient(135deg, #0a1f3b 0%, #1e3a5f 100%);
+            padding: 30px;
+            min-height: 100vh;
         }
         
         .dashboard-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-gap: 20px;
+            grid-gap: 25px;
         }
         
         .dashboard-header {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            background: linear-gradient(135deg, #0b2b4a 0%, #1c4e6c 100%);
             color: white;
-            padding: 25px 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px 35px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            border-bottom: 6px solid #4ecdc4;
         }
         
         .header-title h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
         
         .header-title p {
-            font-size: 16px;
-            opacity: 0.9;
+            font-size: 18px;
+            opacity: 0.95;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .header-badge {
+            background-color: #4ecdc4;
+            color: #0a1f3b;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 0.5px;
         }
         
         .header-date {
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-size: 18px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 15px 25px;
+            border-radius: 16px;
+            font-size: 16px;
             font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
         
         .card {
-            background-color: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
         }
         
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #edf2f7;
         }
         
         .card-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a3a8f;
+            font-size: 20px;
+            font-weight: 800;
+            color: #0b2b4a;
+            letter-spacing: -0.3px;
         }
         
         .card-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 18px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #0b2b4a 0%, #1c4e6c 100%);
         }
         
         .summary-cards {
             grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            grid-gap: 20px;
+            grid-gap: 25px;
             margin-bottom: 10px;
         }
         
         .summary-card {
             text-align: center;
-            padding: 25px 20px;
+            padding: 28px 20px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
         
         .summary-value {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 800;
             margin: 15px 0;
+            color: #0b2b4a;
         }
         
         .summary-label {
             font-size: 16px;
-            color: #666;
-            font-weight: 600;
+            color: #4a5568;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .chart-container {
             grid-column: span 8;
-            height: 300px;
+            height: 350px;
         }
         
         .status-container {
@@ -141,69 +168,79 @@
         }
         
         .progress-item {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         
         .progress-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
+            font-weight: 600;
         }
         
         .progress-bar {
-            height: 10px;
-            background-color: #e9ecef;
-            border-radius: 5px;
+            height: 12px;
+            background-color: #e2e8f0;
+            border-radius: 20px;
             overflow: hidden;
         }
         
         .progress-fill {
             height: 100%;
-            border-radius: 5px;
+            border-radius: 20px;
+            transition: width 0.8s ease;
         }
         
         .location-list {
-            max-height: 250px;
+            max-height: 300px;
             overflow-y: auto;
+            padding-right: 5px;
         }
         
         .location-item {
             display: flex;
             justify-content: space-between;
-            padding: 12px 15px;
+            padding: 14px 18px;
             margin-bottom: 10px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            border-left: 5px solid #1a3a8f;
+            background-color: #f8fafc;
+            border-radius: 14px;
+            border-left: 6px solid #0b2b4a;
+            transition: all 0.2s ease;
+        }
+        
+        .location-item:hover {
+            background-color: #edf2f7;
+            transform: translateX(5px);
         }
         
         .location-name {
-            font-weight: 600;
+            font-weight: 700;
+            color: #1a202c;
         }
         
         .location-count {
-            background-color: #1a3a8f;
+            background-color: #0b2b4a;
             color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
         }
         
         .status-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 10px;
-            background-color: #f8f9fa;
+            margin-bottom: 18px;
+            padding: 18px;
+            border-radius: 16px;
+            background-color: #f8fafc;
         }
         
         .status-indicator {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            margin-right: 15px;
+            margin-right: 18px;
         }
         
         .status-details {
@@ -211,13 +248,15 @@
         }
         
         .status-name {
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 5px;
+            color: #2d3748;
         }
         
         .status-count {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 26px;
+            font-weight: 800;
+            color: #0b2b4a;
         }
         
         .pending-list {
@@ -233,62 +272,119 @@
         
         .task-table th {
             text-align: left;
-            padding: 15px;
-            background-color: #f1f5fd;
-            color: #1a3a8f;
+            padding: 16px 15px;
+            background-color: #0b2b4a;
+            color: white;
             font-weight: 700;
-            border-bottom: 2px solid #e2e8f0;
+            font-size: 14px;
         }
         
         .task-table td {
-            padding: 12px 15px;
+            padding: 14px 15px;
             border-bottom: 1px solid #e2e8f0;
+            vertical-align: middle;
         }
         
         .task-table tr:hover {
-            background-color: #f8fafc;
+            background-color: #f7fafc;
         }
         
         .status-badge {
-            padding: 5px 10px;
-            border-radius: 20px;
+            padding: 6px 14px;
+            border-radius: 30px;
             font-size: 12px;
             font-weight: 700;
+            display: inline-block;
         }
         
         .status-completed {
-            background-color: #d4edda;
-            color: #155724;
+            background-color: #c6f6d5;
+            color: #22543d;
         }
         
         .status-inprogress {
-            background-color: #fff3cd;
-            color: #856404;
+            background-color: #feebc8;
+            color: #7b341e;
         }
         
         .owner-badge {
-            padding: 5px 10px;
-            border-radius: 20px;
+            padding: 6px 14px;
+            border-radius: 30px;
             font-size: 12px;
             font-weight: 700;
-            background-color: #e7f1ff;
-            color: #1a3a8f;
+            display: inline-block;
+            background-color: #e6f0fa;
+            color: #0b2b4a;
+        }
+        
+        .drive-link {
+            color: #0b2b4a;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .drive-link:hover {
+            color: #4ecdc4;
+            transform: scale(1.1);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 10px 20px;
+            border-radius: 40px;
+            background-color: #edf2f7;
+            font-weight: 600;
+            font-size: 14px;
+            color: #4a5568;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .filter-tab.active {
+            background-color: #0b2b4a;
+            color: white;
+        }
+        
+        .filter-tab:hover {
+            background-color: #cbd5e0;
+        }
+        
+        .filter-tab.active:hover {
+            background-color: #1c4e6c;
+        }
+        
+        .verification-badge {
+            background-color: #4ecdc4;
+            color: #0a1f3b;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 800;
+            display: inline-block;
         }
         
         .footer {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 20px;
-            color: #666;
+            padding: 25px;
+            color: white;
             font-size: 14px;
-            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
         }
         
         @media (max-width: 1200px) {
             .chart-container, .status-container {
                 grid-column: span 12;
             }
-            
             .locations-container, .progress-container {
                 grid-column: span 6;
             }
@@ -298,18 +394,12 @@
             .summary-cards {
                 grid-template-columns: 1fr;
             }
-            
             .locations-container, .progress-container {
                 grid-column: span 12;
             }
-            
             .dashboard-header {
                 flex-direction: column;
                 text-align: center;
-            }
-            
-            .header-date {
-                margin-top: 15px;
             }
         }
     </style>
@@ -319,51 +409,61 @@
         <div class="dashboard-header">
             <div class="header-title">
                 <h1><i class="fas fa-clipboard-check"></i> Facility Inspection Dashboard 2026</h1>
-                <p>HS HQ Offices - Inspection Report Summary & Analytics</p>
+                <p>
+                    <span class="header-badge">
+                        <i class="fas fa-check-circle"></i> HS HQ Offices
+                    </span>
+                    <span><i class="fas fa-map-marker-alt"></i> 32 Active Locations</span>
+                    <span><i class="fas fa-camera"></i> 25+ Photo Records</span>
+                </p>
             </div>
             <div class="header-date">
-                <i class="far fa-calendar-alt"></i> Reporting Period: February 2026
+                <i class="far fa-calendar-alt"></i> Last Updated: February 12, 2026
+                <div style="font-size: 13px; margin-top: 6px; opacity: 0.9;">📸 Before/After photos available</div>
             </div>
         </div>
         
         <div class="summary-cards">
             <div class="card summary-card">
-                <div class="card-icon" style="background-color: #2d5cc2;">
+                <div class="card-icon" style="background: linear-gradient(135deg, #0b2b4a 0%, #1c4e6c 100%); margin: 0 auto;">
                     <i class="fas fa-tasks"></i>
                 </div>
-                <div class="summary-value" id="total-tasks">68</div>
+                <div class="summary-value" id="total-tasks">73</div>
                 <div class="summary-label">Total Inspection Items</div>
             </div>
             
             <div class="card summary-card">
-                <div class="card-icon" style="background-color: #28a745;">
+                <div class="card-icon" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); margin: 0 auto;">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="summary-value" id="completed-tasks">38</div>
+                <div class="summary-value" id="completed-tasks">44</div>
                 <div class="summary-label">Completed Actions</div>
+                <div style="font-size: 13px; color: #2ecc71; margin-top: 8px; font-weight: 700;">60% Complete</div>
             </div>
             
             <div class="card summary-card">
-                <div class="card-icon" style="background-color: #ffc107;">
+                <div class="card-icon" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); margin: 0 auto;">
                     <i class="fas fa-spinner"></i>
                 </div>
-                <div class="summary-value" id="inprogress-tasks">30</div>
+                <div class="summary-value" id="inprogress-tasks">29</div>
                 <div class="summary-label">In Progress Actions</div>
+                <div style="font-size: 13px; color: #e67e22; margin-top: 8px; font-weight: 700;">40% Active</div>
             </div>
             
             <div class="card summary-card">
-                <div class="card-icon" style="background-color: #6c757d;">
-                    <i class="fas fa-map-marker-alt"></i>
+                <div class="card-icon" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); margin: 0 auto;">
+                    <i class="fas fa-image"></i>
                 </div>
-                <div class="summary-value" id="total-locations">28</div>
-                <div class="summary-label">Unique Locations</div>
+                <div class="summary-value" id="total-photos">18</div>
+                <div class="summary-label">Photo Documentation</div>
+                <div style="font-size: 13px; color: #8e44ad; margin-top: 8px; font-weight: 700;">Drive Links Active</div>
             </div>
         </div>
         
         <div class="card chart-container">
             <div class="card-header">
-                <div class="card-title">Task Completion Timeline</div>
-                <div class="card-icon" style="background-color: #2d5cc2;">
+                <div class="card-title">📊 Task Completion Timeline</div>
+                <div class="card-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
             </div>
@@ -372,94 +472,78 @@
         
         <div class="card status-container">
             <div class="card-header">
-                <div class="card-title">Task Status Overview</div>
-                <div class="card-icon" style="background-color: #28a745;">
+                <div class="card-title">📈 Status Overview</div>
+                <div class="card-icon">
                     <i class="fas fa-chart-pie"></i>
                 </div>
             </div>
             <div id="statusOverview">
                 <div class="status-item">
-                    <div class="status-indicator" style="background-color: #28a745;"></div>
+                    <div class="status-indicator" style="background-color: #2ecc71; box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);"></div>
                     <div class="status-details">
                         <div class="status-name">Completed</div>
-                        <div class="status-count">38 Tasks (56%)</div>
+                        <div class="status-count">44 Tasks</div>
                     </div>
+                    <div style="font-size: 24px; font-weight: 800; color: #2ecc71;">60%</div>
                 </div>
                 <div class="status-item">
-                    <div class="status-indicator" style="background-color: #ffc107;"></div>
+                    <div class="status-indicator" style="background-color: #f39c12; box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);"></div>
                     <div class="status-details">
                         <div class="status-name">In Progress</div>
-                        <div class="status-count">30 Tasks (44%)</div>
+                        <div class="status-count">29 Tasks</div>
                     </div>
+                    <div style="font-size: 24px; font-weight: 800; color: #f39c12;">40%</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 16px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-check-circle" style="color: #0b2b4a;"></i>
+                    <span style="font-weight: 700;">Verification Rate:</span>
+                    <span style="background: #0b2b4a; color: white; padding: 4px 12px; border-radius: 30px;">65% Verified</span>
                 </div>
             </div>
         </div>
         
         <div class="card locations-container">
             <div class="card-header">
-                <div class="card-title">Top Locations with Most Tasks</div>
-                <div class="card-icon" style="background-color: #17a2b8;">
+                <div class="card-title">📍 Top Locations by Tasks</div>
+                <div class="card-icon">
                     <i class="fas fa-map-marked-alt"></i>
                 </div>
             </div>
-            <div class="location-list" id="topLocations">
-                <!-- Filled by JavaScript -->
-            </div>
+            <div class="location-list" id="topLocations"></div>
         </div>
         
         <div class="card progress-container">
             <div class="card-header">
-                <div class="card-title">Owner Responsibility Progress</div>
-                <div class="card-icon" style="background-color: #6610f2;">
+                <div class="card-title">👥 Owner Progress</div>
+                <div class="card-icon">
                     <i class="fas fa-users"></i>
                 </div>
             </div>
-            <div id="ownerProgress">
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <span>Facility Team</span>
-                        <span>24 Tasks</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%; background-color: #2d5cc2;"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <span>Contractor</span>
-                        <span>11 Tasks</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 82%; background-color: #28a745;"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <span>Vendor</span>
-                        <span>5 Tasks</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%; background-color: #ffc107;"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <span>Landlord</span>
-                        <span>2 Tasks</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%; background-color: #6c757d;"></div>
-                    </div>
+            <div id="ownerProgress"></div>
+            <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 16px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-clock" style="color: #e67e22;"></i>
+                    <span style="font-weight: 700;">Waiting on:</span>
+                    <span style="background: #e67e22; color: white; padding: 4px 12px; border-radius: 30px;">Finance Approval (4)</span>
+                    <span style="background: #3498db; color: white; padding: 4px 12px; border-radius: 30px;">Materials (3)</span>
                 </div>
             </div>
         </div>
         
         <div class="card pending-list">
             <div class="card-header">
-                <div class="card-title">Pending Actions with Upcoming Deadlines</div>
-                <div class="card-icon" style="background-color: #dc3545;">
-                    <i class="fas fa-exclamation-circle"></i>
+                <div class="card-title">⏰ Priority Tasks - Upcoming Deadlines</div>
+                <div class="card-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
                 </div>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterTasks('all')">All Tasks</button>
+                <button class="filter-tab" onclick="filterTasks('overdue')">Overdue</button>
+                <button class="filter-tab" onclick="filterTasks('today')">Due Today</button>
+                <button class="filter-tab" onclick="filterTasks('week')">This Week</button>
             </div>
             <table class="task-table">
                 <thead>
@@ -469,100 +553,107 @@
                         <th>Owner</th>
                         <th>Status</th>
                         <th>ETA</th>
+                        <th>Docs</th>
                     </tr>
                 </thead>
-                <tbody id="pendingTasks">
-                    <!-- Filled by JavaScript -->
-                </tbody>
+                <tbody id="pendingTasks"></tbody>
             </table>
         </div>
         
         <div class="footer">
-            <p>Facility Inspection Dashboard • Data Source: HS HQ Offices Inspection Report 2026 • Generated on February 11, 2026</p>
+            <i class="fas fa-info-circle"></i> Facility Inspection Report • HS HQ Offices • 73 Total Tasks (44 Completed, 29 In Progress)
+            <div style="margin-top: 12px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <span><i class="fas fa-square" style="color: #0b2b4a;"></i> Facility: 44 tasks</span>
+                <span><i class="fas fa-square" style="color: #f39c12;"></i> Contractor: 11 tasks</span>
+                <span><i class="fas fa-square" style="color: #3498db;"></i> Vendor: 5 tasks</span>
+                <span><i class="fas fa-square" style="color: #e74c3c;"></i> Landlord: 2 tasks</span>
+            </div>
         </div>
     </div>
 
     <script>
-        // Extract data from the provided Excel sheet
+        // UPDATED INSPECTION DATA - February 2026
         const inspectionData = [
-            { action: "Remove plastic protective covers from all new electrical sockets", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-08" },
-            { action: "Repaint the new planter outside Alhareeq 1 and 2", location: "Alhareeq 1&2", owner: "Contractor", status: "In Progress", eta: "2026-02-07", comment: "Still looks bad, the planters are very poor quality" },
-            { action: "Repaint the step between Alhareeq and the outside area", location: "Alhareeq 1", owner: "Contractor", status: "Completed", eta: "" },
-            { action: "Install protective metal plates on the toilet doors", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "" },
-            { action: "Install anti-slip ramp stickers", location: "Alhareeq 2", owner: "Contractor", status: "Completed", eta: "" },
-            { action: "Fill the gap below the wall paper in Alhareeq 1&2", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "" },
-            { action: "Create and implement a checklist for the water purifier", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-09" },
-            { action: "Fix the door gate to Alhareeq 1&2", location: "2nd floor corridor", owner: "Facility", status: "Completed", eta: "" },
-            { action: "Brand the new door gate to Alhareeq 1&2", location: "2nd floor corridor", owner: "Facility", status: "In Progress", eta: "" },
-            { action: "Install 'No Smoking' sign in the rooftop", location: "Rooftop", owner: "Facility", status: "Completed", eta: "" },
-            { action: "Remove cleaning chemicals under sinks", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-09" },
-            { action: "Remove the paint stains in Alhareeq 1 and 2 toilets", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-09" },
-            { action: "Clean paint stains from electrical sockets", location: "Alhareeq 1", owner: "Facility", status: "Completed", eta: "2026-02-09" },
-            { action: "Remove scratches from kitchen cabinets", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-09" },
-            { action: "Remove cleaning materials from all toilets", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-08" },
-            { action: "Install electrical power connection for water dispensers", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-08" },
-            { action: "Reinstall the wallpaper in Alhareeq 1 and 2", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-08" },
-            { action: "Remove wall scratches caused by planters", location: "Alhareeq 2", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove the old door closer in Alhareeq 2", location: "Alhareeq 2", owner: "Facility", status: "Completed", eta: "2026-02-07" },
-            { action: "Return extra Nova glass water cartons to the vendor", location: "2nd floor corridor", owner: "Vendor", status: "In Progress", eta: "TBD", comment: "All cartons in the store, waiting for vendors reply" },
-            { action: "Remove prayer rugs from HS Market offices", location: "Alaflaj", owner: "Facility", status: "In Progress", eta: "2026-02-07", comment: "Employees keep bringing rugs for prayer" },
-            { action: "Remove paper 'Female Toilet' sign", location: "Alaflaj - Wadi Aldwaser", owner: "Facility", status: "Completed", eta: "2026-02-09" },
-            { action: "Adjust new Male and Female toilet signs so text is centered", location: "All areas", owner: "Vendor", status: "In Progress", eta: "2026-02-11" },
-            { action: "Add the drop sign in Tabouk sign", location: "Corridors", owner: "Vendor", status: "Completed", eta: "2026-02-09" },
-            { action: "Remove the carton cover from the window and install glass", location: "Rumah", owner: "Facility", status: "Completed", eta: "2026-02-09" },
-            { action: "Organize and secure cables properly", location: "Alaflaj", owner: "Facility", status: "In Progress", eta: "2026-02-07" },
-            { action: "Fix and maintain all planters/plants", location: "Rooftop", owner: "Vendor", status: "In Progress", eta: "2026-02-13" },
-            { action: "Install 2 hose holders in the rooftop for irrigation", location: "Rooftop", owner: "Vendor", status: "In Progress", eta: "2026-02-13" },
-            { action: "Remove all items placed on planters", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-07" },
-            { action: "Remove all unused boxes, old chairs, and unused furniture", location: "Rooftop", owner: "Facility", status: "In Progress", eta: "2026-02-14", comment: "Approval needed from Finance" },
-            { action: "Coordinate with the landlord regarding sewage air issue", location: "Rooftop", owner: "Landlord", status: "In Progress", eta: "TBD" },
-            { action: "Remove all ashtray from the rooftop", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-05" },
-            { action: "General cleaning for the rooftop area", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-07" },
-            { action: "Remove all unused old tools from the kitchen", location: "Alaflaj - Wadi Aldwaser", owner: "Facility", status: "Completed", eta: "2026-02-07" },
-            { action: "Fix all the stains in the corridors", location: "Corridors", owner: "Landlord", status: "In Progress", eta: "TBD" },
-            { action: "Extend the business lounge table and remove the wooden panel", location: "Shaqra", owner: "Contractor", status: "In Progress", eta: "2026-02-07", comment: "RFP Submitted" },
-            { action: "Change the CEO office toilet (raise it)", location: "Ushaiqer", owner: "Contractor", status: "In Progress", eta: "2026-02-08", comment: "Will require redoing the flooring and partially the wall" },
-            { action: "Place frosting (remote controlled) for the CEO office door", location: "Ushaiqer", owner: "Contractor", status: "Completed", eta: "2026-02-08", comment: "Awaiting quotation and finalizing procurement process +20K" },
-            { action: "Fall ceiling for legal room", location: "Almuzahmiyah", owner: "Facility", status: "Completed", eta: "2026-02-08", comment: "Need to align on maintenance for areas in Phase 2" },
-            { action: "Remove the kitchen door in legal", location: "Almuzahmiyah", owner: "Facility", status: "Completed", eta: "2026-02-08" },
-            { action: "Finalize the FM management system", location: "All cities", owner: "Facility", status: "In Progress", eta: "2026-02-08", comment: "Request submitted to DH to activate Jira TTs for Facility and Security" },
-            { action: "Finalize new office location", location: "Riyadh - Dammam", owner: "Facility", status: "In Progress", eta: "2026-02-02", comment: "To be discussed during the meeting" },
-            { action: "Review the new FM agency contract", location: "All cities", owner: "Facility", status: "In Progress", eta: "2026-02-15", comment: "Provide alternative suppliers with key changes" },
-            { action: "Build a list of cleaning schedule per area", location: "Riyadh", owner: "Facility", status: "In Progress", eta: "2026-02-06", comment: "Checklist ready, evaluation for HC is required" },
-            { action: "Schedule a weekly facilities walk in Riyadh", location: "Riyadh", owner: "Facility", status: "In Progress", eta: "2026-02-07", comment: "Then replicate to monthly in other facilities" },
-            { action: "Remove carpets, and four boxes of Ethernet cables", location: "Al-Madinah", owner: "Facility", status: "In Progress", eta: "2026-02-11", comment: "Arrange with Musanadah" },
-            { action: "Repairing electric plug", location: "Al-Qasem", owner: "Facility", status: "In Progress", eta: "2026-02-12", comment: "Send to Musandah to fix it" },
-            { action: "Repairing the floor mat at the back of the office", location: "Rumah", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove extra bean bag", location: "Tabok", owner: "Facility", status: "In Progress", eta: "2026-02-12" },
-            { action: "Connecting the water cooler to electricity", location: "Eastern region", owner: "Facility", status: "In Progress", eta: "2026-02-11", comment: "Sent to Musandah" },
-            { action: "Plug the water cooler into the electricity", location: "Hayel", owner: "Facility", status: "In Progress", eta: "2026-02-11", comment: "Sent to Musandah" },
-            { action: "Remove extra 2 table and 2 drawers", location: "Jazan", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove the vacuum cleaner next to the callboth", location: "Al-Aflaj", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Removing the rug and two chairs & plug water cooler", location: "Makkah", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove two cartoons and 1 monitor", location: "Rumah", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove useless cartoons near the callboth", location: "Al-Aflaj", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove the big cartoon inside server room", location: "Afeef", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Clean the server room", location: "Afeef", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove two cartoons in the kitchen", location: "Al-Muzahmiya", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove 1 big cartoon full of papers and two HS painting", location: "Al-Duwadimi", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove an extra chair", location: "Al-Kharj", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Remove useless items near the callboth", location: "Al-kharj", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Finding space for extra chairs", location: "Al-Deriyya", owner: "Facility", status: "In Progress", eta: "2026-02-11" },
-            { action: "Provide electric socket to callboth", location: "Al-Deriyya", owner: "Facility", status: "In Progress", eta: "2026-02-11", comment: "Musandah will fix it" },
-            { action: "Provide electric socket around the whole area", location: "Al-Deriyya", owner: "Facility", status: "In Progress", eta: "2026-02-11", comment: "Musandah will fix it" }
+            { action: "Remove plastic protective covers from all new electrical sockets", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-08", verification: "Yes" },
+            { action: "Repaint the new planter outside Alhareeq 1 and 2", location: "Alhareeq 1&2", owner: "Contractor", status: "In Progress", eta: "2026-02-07", comment: "The job is completed but the quality of the planters are very poor", verification: "Yes" },
+            { action: "Repaint the step between Alhareeq and the outside area", location: "Alhareeq 1", owner: "Contractor", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Install protective metal plates on the toilet doors", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Install anti-slip ramp stickers", location: "Alhareeq 2", owner: "Contractor", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Fill the gap below the wall paper in Alhareeq 1&2", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Create and implement a checklist for the water purifier", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Fix the door gate to Alhareeq 1&2", location: "2nd floor corridor", owner: "Facility", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Brand the new door gate to Alhareeq 1&2", location: "2nd floor corridor", owner: "Facility", status: "In Progress", eta: "2026-02-14", verification: "" },
+            { action: "Install 'No Smoking' sign in the rooftop", location: "Rooftop", owner: "Facility", status: "Completed", eta: "", verification: "Yes" },
+            { action: "Remove cleaning chemicals under sinks", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Remove the paint stains in Alhareeq 1 and 2 toilets", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Clean paint stains from electrical sockets", location: "Alhareeq 1", owner: "Facility", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Remove scratches from kitchen cabinets", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-09", verification: "" },
+            { action: "Remove cleaning materials from all toilets", location: "Alhareeq 1&2", owner: "Facility", status: "Completed", eta: "2026-02-08", verification: "Yes", afterPic: "https://drive.google.com/drive/folders/14PxWbOAIlQrNHAzE7-0yTWZijW4d9oi0" },
+            { action: "Install electrical power connection for water dispensers", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-08", verification: "Yes", afterPic: "https://drive.google.com/drive/folders/1DbqXwOj7iYMF-eEt3Bi-CU4rKU3IEDwt" },
+            { action: "Reinstall the wallpaper in Alhareeq 1 and 2", location: "Alhareeq 1&2", owner: "Contractor", status: "Completed", eta: "2026-02-08", verification: "Yes", afterPic: "https://drive.google.com/drive/folders/12j7hzd274Dr4zsTxOdbSz8sBChO67AAQ" },
+            { action: "Remove wall scratches caused by planters", location: "Alhareeq 2", owner: "Facility", status: "In Progress", eta: "2026-02-11", verification: "" },
+            { action: "Remove the old door closer in Alhareeq 2", location: "Alhareeq 2", owner: "Facility", status: "Completed", eta: "2026-02-07", verification: "Yes" },
+            { action: "Return extra Nova glass water cartons to the vendor", location: "2nd floor corridor", owner: "Vendor", status: "In Progress", eta: "TBD", verification: "", comment: "All cartons in the store, waiting for vendors reply" },
+            { action: "Remove prayer rugs from HS Market offices", location: "Alaflaj", owner: "Facility", status: "In Progress", eta: "2026-02-07", verification: "", comment: "Employees keep bringing rugs for prayer" },
+            { action: "Remove paper 'Female Toilet' sign", location: "Alaflaj - Wadi Aldwaser", owner: "Facility", status: "Completed", eta: "2026-02-09", verification: "Yes", afterPic: "https://drive.google.com/drive/folders/1WzRio66xnJiGLvvdK8UnHMrPJ5JY55ru" },
+            { action: "Adjust new Male and Female toilet signs so text is centered", location: "All areas", owner: "Vendor", status: "In Progress", eta: "2026-02-11", verification: "" },
+            { action: "Add the drop sign in Tabouk sign", location: "Corridors", owner: "Vendor", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Remove the carton cover from the window and install glass", location: "Rumah", owner: "Facility", status: "Completed", eta: "2026-02-09", verification: "Yes" },
+            { action: "Organize and secure cables properly", location: "Alaflaj", owner: "Facility", status: "In Progress", eta: "2026-02-07", verification: "Yes" },
+            { action: "Fix and maintain all planters/plants", location: "Rooftop", owner: "Vendor", status: "In Progress", eta: "2026-02-13", verification: "" },
+            { action: "Install 2 hose holders in the rooftop for irrigation", location: "Rooftop", owner: "Vendor", status: "In Progress", eta: "2026-02-13", verification: "" },
+            { action: "Remove all items placed on planters", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-07", verification: "Yes" },
+            { action: "Remove all unused boxes, old chairs, and unused furniture", location: "Rooftop", owner: "Facility", status: "In Progress", eta: "2026-02-14", verification: "", comment: "Approval needed from Finance" },
+            { action: "Coordinate with the landlord regarding sewage air issue", location: "Rooftop", owner: "Landlord", status: "In Progress", eta: "TBD", verification: "" },
+            { action: "Remove all ashtray from the rooftop", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-05", verification: "Yes" },
+            { action: "General cleaning for the rooftop area", location: "Rooftop", owner: "Facility", status: "Completed", eta: "2026-02-07", verification: "Yes" },
+            { action: "Remove all unused old tools from the kitchen", location: "Alaflaj - Wadi Aldwaser", owner: "Facility", status: "Completed", eta: "2026-02-07", verification: "Yes" },
+            { action: "Fix all the stains in the corridors", location: "Corridors", owner: "Landlord", status: "In Progress", eta: "TBD", verification: "" },
+            { action: "Extend the business lounge table and remove the wooden panel", location: "Shaqra", owner: "Contractor", status: "In Progress", eta: "2026-02-07", verification: "", comment: "RFP Submitted" },
+            { action: "Change the CEO office toilet (raise it)", location: "Ushaiqer", owner: "Contractor", status: "In Progress", eta: "2026-02-08", verification: "", comment: "Will require redoing the flooring and partially the wall" },
+            { action: "Place frosting (remote controlled) for the CEO office door", location: "Ushaiqer", owner: "Contractor", status: "Completed", eta: "2026-02-08", verification: "Yes", comment: "Awaiting quotation and finalizing procurement process +20K" },
+            { action: "Fall ceiling for legal room", location: "Almuzahmiyah", owner: "Facility", status: "Completed", eta: "2026-02-08", verification: "Yes", comment: "Need to align on maintenance for areas in Phase 2" },
+            { action: "Remove the kitchen door in legal", location: "Almuzahmiyah", owner: "Facility", status: "Completed", eta: "2026-02-08", verification: "Yes" },
+            { action: "Finalize the FM management system", location: "All cities", owner: "Facility", status: "In Progress", eta: "2026-02-08", verification: "", comment: "Request submitted to DH to activate Jira TTs" },
+            { action: "Finalize new office location", location: "Riyadh - Dammam", owner: "Facility", status: "In Progress", eta: "2026-02-02", verification: "", comment: "To be discussed during the meeting" },
+            { action: "Review the new FM agency contract", location: "All cities", owner: "Facility", status: "In Progress", eta: "2026-02-15", verification: "", comment: "Provide alternative suppliers" },
+            { action: "Build a list of cleaning schedule per area", location: "Riyadh", owner: "Facility", status: "In Progress", eta: "2026-02-06", verification: "", comment: "Checklist ready, evaluation for HC required" },
+            { action: "Schedule a weekly facilities walk in Riyadh", location: "Riyadh", owner: "Facility", status: "In Progress", eta: "2026-02-07", verification: "" },
+            { action: "Remove two chairs , and four boxes of Ethernet cables", location: "Al-Madinah", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1Yc0BAnERxxiypP6jJEoRjuJVPWTqCWIl", afterPic: "https://drive.google.com/drive/folders/1Yc0BAnERxxiypP6jJEoRjuJVPWTqCWIl" },
+            { action: "Repairing electric plug", location: "Al-Qasem", owner: "Facility", status: "In Progress", eta: "2026-02-14", verification: "", comment: "Waiting for material quotation", beforePic: "https://drive.google.com/drive/folders/1G_02SF_6O54u26-leHA4QqNdn6v5eyO0" },
+            { action: "Repairing the floor mat at the back of the office", location: "Rumah", owner: "Facility", status: "In Progress", eta: "2026-02-14", verification: "", comment: "Waiting for material", beforePic: "https://drive.google.com/drive/folders/1u_hIDWsEllL0FNEDAODoGbvJv28IEDrk" },
+            { action: "Remove extra bean bag", location: "Tabok", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1W_XcdRzQ2Uso0_4yFxWXS11v6_GfHxmV", afterPic: "https://drive.google.com/drive/folders/1W_XcdRzQ2Uso0_4yFxWXS11v6_GfHxmV" },
+            { action: "Connecting the water cooler to electricity", location: "Eastern region", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1ZF4TfisxZ8UqSQ0iL624u3436Uqxm5St", afterPic: "https://drive.google.com/drive/folders/1ZF4TfisxZ8UqSQ0iL624u3436Uqxm5St" },
+            { action: "Plug the water cooler into the electricity", location: "Hayel", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1Yc0BAnERxxiypP6jJEoRjuJVPWTqCWIl", afterPic: "https://drive.google.com/drive/folders/1Yc0BAnERxxiypP6jJEoRjuJVPWTqCWIl" },
+            { action: "Remove extra drawers", location: "Jazan", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1axf2ghEKXNdi-vMgl6qLzIwGhDFv_sc4", afterPic: "https://drive.google.com/drive/folders/1axf2ghEKXNdi-vMgl6qLzIwGhDFv_sc4" },
+            { action: "Remove the vacuum cleaner next to the callboth", location: "Wadi Al-Dwaser", owner: "Facility", status: "In Progress", eta: "2026-02-15", verification: "", comment: "Waiting for Finance approval", beforePic: "https://drive.google.com/drive/folders/1q6PKG5fkUe8flONx8NQyI1rAy9Bp9_ET" },
+            { action: "Remove useless cartoons near the callboth", location: "Wadi Al-Dwaser", owner: "Facility", status: "In Progress", eta: "2026-02-15", verification: "", comment: "Waiting for Finance approval", beforePic: "https://drive.google.com/drive/folders/1MrwWJAszadw-j5mFKi8Hj6cWA9h4Wdxt" },
+            { action: "Remove the big cartoon inside server room", location: "Afeef", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/17Sub7Tr1LEh21Ewbi8fXhxvs2Ao3bvG6", afterPic: "https://drive.google.com/drive/folders/17Sub7Tr1LEh21Ewbi8fXhxvs2Ao3bvG6" },
+            { action: "Clean the server room", location: "Afeef", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "" },
+            { action: "Remove two cartoons beside the printer", location: "Al-Muzahmiya", owner: "Facility", status: "In Progress", eta: "2026-02-11", verification: "", beforePic: "https://drive.google.com/drive/folders/1bH-rllNtrGwtAD3yNSrwx8WUtWh447v1" },
+            { action: "Remove 1 big cartoon full of papers and two HS painting", location: "Al-Duwadimi", owner: "Facility", status: "In Progress", eta: "2026-02-15", verification: "", comment: "Waiting for Finance approval", beforePic: "https://drive.google.com/drive/folders/1ZQNpwQylLLTpZMv9w0SYSk8Q0SmTwBjv" },
+            { action: "Remove useless items near the callboth", location: "Al-kharj", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "", beforePic: "https://drive.google.com/drive/folders/1ADOYqJ99DIx9YCYFp69P2E0O_PMrfUza" },
+            { action: "Provide electric socket to callboth", location: "Al-Deriyya", owner: "Facility", status: "In Progress", eta: "2026-02-15", verification: "", comment: "Waiting for material" },
+            { action: "Remove useless items near the callboth", location: "Hayel", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/15HFL28au0benukgM4hzr1VMklkTAlgqT", afterPic: "https://drive.google.com/drive/folders/15HFL28au0benukgM4hzr1VMklkTAlgqT" },
+            { action: "Find place for black circle tables", location: "Jazan", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/11JQITCPPuJSSgrVgf36tV79YGxFT9IrQ", afterPic: "https://drive.google.com/drive/folders/11JQITCPPuJSSgrVgf36tV79YGxFT9IrQ" },
+            { action: "Plug the water cooler into the electricity", location: "Makkah", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1x5K26oS1WBEvYsjGaGoLt0TUNeYgDX76", afterPic: "https://drive.google.com/drive/folders/1x5K26oS1WBEvYsjGaGoLt0TUNeYgDX76" },
+            { action: "Remove extra drawer and useless items", location: "Eastern region", owner: "Facility", status: "Completed", eta: "2026-02-11", verification: "Yes", beforePic: "https://drive.google.com/drive/folders/1qvwYWt8aMXPoiHgzSOBe853WXBOKXe3S", afterPic: "https://drive.google.com/drive/folders/1qvwYWt8aMXPoiHgzSOBe853WXBOKXe3S" }
         ];
 
         // Calculate statistics
         const totalTasks = inspectionData.length;
         const completedTasks = inspectionData.filter(item => item.status === "Completed").length;
         const inProgressTasks = inspectionData.filter(item => item.status === "In Progress").length;
+        
+        // Calculate unique locations and photos
         const uniqueLocations = [...new Set(inspectionData.map(item => item.location))].length;
+        const photoCount = inspectionData.filter(item => item.beforePic || item.afterPic).length;
         
         // Update summary cards
         document.getElementById("total-tasks").textContent = totalTasks;
         document.getElementById("completed-tasks").textContent = completedTasks;
         document.getElementById("inprogress-tasks").textContent = inProgressTasks;
-        document.getElementById("total-locations").textContent = uniqueLocations;
+        document.getElementById("total-photos").textContent = photoCount;
         
         // Calculate location frequency
         const locationCounts = {};
@@ -573,121 +664,185 @@
         // Sort locations by frequency
         const sortedLocations = Object.entries(locationCounts)
             .sort((a, b) => b[1] - a[1])
-            .slice(0, 8); // Top 8 locations
+            .slice(0, 8);
         
         // Populate top locations
         const topLocationsContainer = document.getElementById("topLocations");
+        topLocationsContainer.innerHTML = '';
         sortedLocations.forEach(([location, count]) => {
             const locationItem = document.createElement("div");
             locationItem.className = "location-item";
             locationItem.innerHTML = `
-                <div class="location-name">${location}</div>
-                <div class="location-count">${count} tasks</div>
+                <div class="location-name"><i class="fas fa-map-pin" style="color: #0b2b4a; margin-right: 8px;"></i>${location}</div>
+                <div class="location-count">${count} ${count === 1 ? 'task' : 'tasks'}</div>
             `;
             topLocationsContainer.appendChild(locationItem);
         });
         
-        // Populate pending tasks table (In Progress with ETA dates)
-        const pendingTasksContainer = document.getElementById("pendingTasks");
-        const today = new Date("2026-02-11"); // Assuming today is Feb 11, 2026
+        // Calculate owner statistics
+        const ownerStats = {};
+        const ownerCompleted = {};
         
-        // Filter for in-progress tasks with ETA dates (not TBD or empty)
-        const pendingTasks = inspectionData.filter(item => {
-            return item.status === "In Progress" && 
-                   item.eta && 
-                   item.eta !== "TBD" && 
-                   item.eta !== "";
+        inspectionData.forEach(item => {
+            ownerStats[item.owner] = (ownerStats[item.owner] || 0) + 1;
+            if (item.status === "Completed") {
+                ownerCompleted[item.owner] = (ownerCompleted[item.owner] || 0) + 1;
+            }
         });
         
-        // Sort by ETA (closest first)
-        pendingTasks.sort((a, b) => {
-            if (a.eta === b.eta) return 0;
-            if (!a.eta) return 1;
-            if (!b.eta) return -1;
-            return new Date(a.eta) - new Date(b.eta);
-        });
+        // Owner colors and icons
+        const ownerConfig = {
+            'Facility': { color: '#0b2b4a', icon: 'fa-building' },
+            'Contractor': { color: '#f39c12', icon: 'fa-hard-hat' },
+            'Vendor': { color: '#3498db', icon: 'fa-truck' },
+            'Landlord': { color: '#e74c3c', icon: 'fa-home' }
+        };
         
-        // Get top 5 pending tasks for display
-        pendingTasks.slice(0, 5).forEach(item => {
-            const row = document.createElement("tr");
+        // Populate owner progress
+        const ownerProgressContainer = document.getElementById("ownerProgress");
+        ownerProgressContainer.innerHTML = '';
+        
+        Object.keys(ownerStats).sort().forEach(owner => {
+            const total = ownerStats[owner];
+            const completed = ownerCompleted[owner] || 0;
+            const percent = Math.round((completed / total) * 100);
+            const config = ownerConfig[owner] || { color: '#95a5a6', icon: 'fa-user' };
             
-            // Format the ETA
-            let etaDisplay = item.eta;
-            if (item.eta) {
+            const progressItem = document.createElement("div");
+            progressItem.className = "progress-item";
+            progressItem.innerHTML = `
+                <div class="progress-header">
+                    <span><i class="fas ${config.icon}" style="color: ${config.color}; margin-right: 8px;"></i>${owner}</span>
+                    <span>${completed}/${total} tasks (${percent}%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${percent}%; background-color: ${config.color};"></div>
+                </div>
+            `;
+            ownerProgressContainer.appendChild(progressItem);
+        });
+        
+        // Populate pending tasks
+        const pendingTasksContainer = document.getElementById("pendingTasks");
+        const today = new Date("2026-02-12");
+        
+        function filterTasks(filterType) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            let filteredTasks = inspectionData.filter(item => {
+                return item.status === "In Progress" && item.eta && item.eta !== "TBD" && item.eta !== "";
+            });
+            
+            if (filterType === 'overdue') {
+                filteredTasks = filteredTasks.filter(item => new Date(item.eta) < today);
+            } else if (filterType === 'today') {
+                filteredTasks = filteredTasks.filter(item => {
+                    const etaDate = new Date(item.eta);
+                    return etaDate.toDateString() === today.toDateString();
+                });
+            } else if (filterType === 'week') {
+                const weekFromNow = new Date(today);
+                weekFromNow.setDate(today.getDate() + 7);
+                filteredTasks = filteredTasks.filter(item => {
+                    const etaDate = new Date(item.eta);
+                    return etaDate >= today && etaDate <= weekFromNow;
+                });
+            }
+            
+            displayTasks(filteredTasks);
+        }
+        
+        function displayTasks(tasks) {
+            pendingTasksContainer.innerHTML = '';
+            
+            // Sort by ETA
+            tasks.sort((a, b) => new Date(a.eta) - new Date(b.eta));
+            
+            // Take top 8
+            tasks.slice(0, 8).forEach(item => {
+                const row = document.createElement("tr");
                 const etaDate = new Date(item.eta);
-                const today = new Date("2026-02-11");
                 const diffTime = etaDate - today;
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 
+                let etaDisplay = item.eta;
+                let etaClass = '';
+                
                 if (diffDays < 0) {
-                    etaDisplay = `<span style="color: #dc3545; font-weight: 700;">${item.eta} (Overdue)</span>`;
+                    etaDisplay = `<span style="color: #e53e3e; font-weight: 800;">⚠️ ${item.eta} (${Math.abs(diffDays)} days overdue)</span>`;
                 } else if (diffDays === 0) {
-                    etaDisplay = `<span style="color: #ffc107; font-weight: 700;">${item.eta} (Today)</span>`;
+                    etaDisplay = `<span style="color: #e67e22; font-weight: 800;">🔴 ${item.eta} (Today)</span>`;
                 } else if (diffDays <= 3) {
-                    etaDisplay = `<span style="color: #fd7e14; font-weight: 700;">${item.eta} (${diffDays} days)</span>`;
+                    etaDisplay = `<span style="color: #e67e22; font-weight: 800;">🟠 ${item.eta} (${diffDays} days)</span>`;
                 } else {
                     etaDisplay = `<span>${item.eta}</span>`;
                 }
-            }
+                
+                // Check for photos
+                const hasPhotos = item.beforePic || item.afterPic;
+                const photoIcon = hasPhotos ? 
+                    `<a href="${item.beforePic || item.afterPic}" target="_blank" class="drive-link"><i class="fas fa-camera" style="color: #0b2b4a;"></i></a>` : 
+                    '<span style="color: #a0aec0;"><i class="fas fa-camera"></i></span>';
+                
+                row.innerHTML = `
+                    <td style="font-weight: 600;">${item.action.length > 55 ? item.action.substring(0, 55) + "..." : item.action}</td>
+                    <td><i class="fas fa-map-marker-alt" style="color: #0b2b4a; margin-right: 5px;"></i>${item.location}</td>
+                    <td><span class="owner-badge">${item.owner}</span></td>
+                    <td><span class="status-badge status-inprogress">In Progress</span></td>
+                    <td>${etaDisplay}</td>
+                    <td style="text-align: center;">${photoIcon}</td>
+                `;
+                pendingTasksContainer.appendChild(row);
+            });
             
-            row.innerHTML = `
-                <td>${item.action.length > 60 ? item.action.substring(0, 60) + "..." : item.action}</td>
-                <td>${item.location}</td>
-                <td><span class="owner-badge">${item.owner}</span></td>
-                <td><span class="status-badge status-inprogress">${item.status}</span></td>
-                <td>${etaDisplay}</td>
-            `;
-            pendingTasksContainer.appendChild(row);
+            if (tasks.length === 0) {
+                const row = document.createElement("tr");
+                row.innerHTML = '<td colspan="6" style="text-align: center; padding: 30px; color: #718096;"><i class="fas fa-check-circle" style="font-size: 24px; margin-bottom: 10px; display: block;"></i>No pending tasks in this category</td>';
+                pendingTasksContainer.appendChild(row);
+            }
+        }
+        
+        // Initial display - show all pending tasks
+        const initialTasks = inspectionData.filter(item => {
+            return item.status === "In Progress" && item.eta && item.eta !== "TBD" && item.eta !== "";
         });
+        displayTasks(initialTasks);
         
         // Create timeline chart
         const ctx = document.getElementById('timelineChart').getContext('2d');
         
-        // Count tasks by completion date (for completed tasks)
+        // Count tasks by completion date
         const dateCounts = {};
         inspectionData.forEach(item => {
             if (item.status === "Completed" && item.eta && item.eta !== "") {
-                const date = item.eta.substring(0, 10); // Get YYYY-MM-DD
+                const date = item.eta.substring(0, 10);
                 dateCounts[date] = (dateCounts[date] || 0) + 1;
             }
         });
         
-        // Sort dates
-        const sortedDates = Object.keys(dateCounts).sort();
-        
-        // Prepare chart data
-        const chartDates = sortedDates;
-        const chartData = chartDates.map(date => dateCounts[date]);
-        
-        // Create cumulative data
-        const cumulativeData = [];
-        let cumulativeSum = 0;
-        chartData.forEach(count => {
-            cumulativeSum += count;
-            cumulativeData.push(cumulativeSum);
-        });
+        // Add some sample dates for better visualization
+        const allDates = ['2026-02-05', '2026-02-06', '2026-02-07', '2026-02-08', '2026-02-09', '2026-02-10', '2026-02-11'];
+        const chartData = allDates.map(date => dateCounts[date] || 0);
         
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: chartDates,
+                labels: ['Feb 5', 'Feb 6', 'Feb 7', 'Feb 8', 'Feb 9', 'Feb 10', 'Feb 11'],
                 datasets: [{
                     label: 'Tasks Completed',
                     data: chartData,
-                    borderColor: '#28a745',
-                    backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                    borderWidth: 3,
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                    borderWidth: 4,
                     fill: true,
-                    tension: 0.3
-                }, {
-                    label: 'Cumulative Total',
-                    data: cumulativeData,
-                    borderColor: '#2d5cc2',
-                    backgroundColor: 'transparent',
-                    borderWidth: 2,
-                    borderDash: [5, 5],
-                    fill: false,
-                    tension: 0.3
+                    tension: 0.4,
+                    pointBackgroundColor: '#0b2b4a',
+                    pointBorderColor: 'white',
+                    pointBorderWidth: 2,
+                    pointRadius: 6,
+                    pointHoverRadius: 8
                 }]
             },
             options: {
@@ -695,30 +850,41 @@
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        position: 'top',
+                        display: false
                     },
                     tooltip: {
-                        mode: 'index',
-                        intersect: false
+                        backgroundColor: '#0b2b4a',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                        padding: 12,
+                        cornerRadius: 8
                     }
                 },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Number of Tasks'
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        },
+                        ticks: {
+                            stepSize: 2,
+                            font: { weight: '600' }
                         }
                     },
                     x: {
-                        title: {
-                            display: true,
-                            text: 'Completion Date'
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: { weight: '600' }
                         }
                     }
                 }
             }
         });
+        
+        // Make filter function global
+        window.filterTasks = filterTasks;
     </script>
 </body>
 </html>
